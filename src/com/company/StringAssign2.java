@@ -16,7 +16,7 @@ public class StringAssign2 {
         repetitiveWords(str);
         capitaliseYou(str);
         System.out.println("These words are repeated multiple times: "
-                + String.join(", ", multipleTimes(str)));
+                + String.join(", ", repetitiveWords1(str)));
     }
 
     public static long countByPattern(String str, String pattern) {
@@ -29,11 +29,6 @@ public class StringAssign2 {
     public static long wordsInSentence(String str) {
 
         return countByPattern(str, "\\S+");
-
-        // Code sample before making countByPattern Method:
-        //Pattern p = Pattern.compile("\\S+");
-        //Matcher m = p.matcher(str);
-        //    return m.results().count();
     }
 
     public static long the(String str) {
@@ -52,15 +47,15 @@ public class StringAssign2 {
         str = str.toLowerCase();
         String[] split = str.split(" ");
         System.out.println("These words are repeated multiple times: ");
-        for(int i = 0; i < split.length; i++) {
+        for (int i = 0; i < split.length; i++) {
             counter = 1;
-            for(int j = i+1; j < split.length; j++) {
-                if(split[i].equals(split[j])) {
+            for (int j = i + 1; j < split.length; j++) {
+                if (split[i].equals(split[j])) {
                     counter++;
                     split[j] = "0";
                 }
             }
-            if(counter > 1 && !split[i].equals("0"))
+            if (counter > 1 && !split[i].equals("0"))
                 System.out.println(split[i]);
         }
     }
@@ -72,7 +67,7 @@ public class StringAssign2 {
 
 
     // 'Smart' way of finding REPEATING words:
-    public static String[] multipleTimes(String str) {
+    public static String[] repetitiveWords1(String str) {
 
         Pattern p = Pattern.compile("(\\b\\S+\\b)(?=.+\\1)");
         Matcher m = p.matcher(str);
@@ -83,7 +78,7 @@ public class StringAssign2 {
             arr[i] = ((MatchResult) array[i]).group();
         }
 
-       return arr;
+        return arr;
     }
 }
 

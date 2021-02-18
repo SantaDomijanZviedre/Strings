@@ -102,8 +102,9 @@ public class StringAssign1 {
             lengthOfWords[i] = counter;
             if (counter != 0 && counter < 2) {
                 System.out.println("There is 1 word that consists of " + i + " letters.");
-            } if (counter > 1) {
-                    System.out.println("There are " + lengthOfWords[i] + " words that consist of " + i + " letters.");
+            }
+            if (counter > 1) {
+                System.out.println("There are " + lengthOfWords[i] + " words that consist of " + i + " letters.");
             }
         }
     }

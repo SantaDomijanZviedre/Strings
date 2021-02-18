@@ -34,7 +34,7 @@ public class StringAssign4 {
         shuffle(cardPack);
         System.out.println(Arrays.toString(cardPack));
         System.out.println("First card of shuffled card pack is: "
-              + Arrays.toString(Arrays.copyOfRange(cardPack, 0, 1)));
+                + Arrays.toString(Arrays.copyOfRange(cardPack, 0, 1)));
         cardPack[0] = "0";
         System.out.println("Next six cards (excluding the first card) of shuffled card pack are: "
                 + Arrays.toString(Arrays.copyOfRange(cardPack, 1, 7)));
@@ -56,9 +56,10 @@ public class StringAssign4 {
     public static void shuffle(String[] cards) {
 
         Collections.shuffle(Arrays.asList(cards)); // Generic solution that gives reliable shuffle
-        // https://www.journaldev.com/32661/shuffle-array-java
+                                                   // https://www.journaldev.com/32661/shuffle-array-java
     }
 }
+
 
 // Shuffling cards with for loop learning purposes:
 //        Random r = new Random();

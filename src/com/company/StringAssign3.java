@@ -15,6 +15,8 @@ public class StringAssign3 {
     }
 }
 
+
+
 // Initial code before optimisation:
 /*    String name = "John";
         if (name.matches("[A-Za-z]{4}")) {
