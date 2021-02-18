@@ -8,10 +8,10 @@ public class StringAssign5 {
         String str = "Madam, in Eden, I'm Adam.";
 //        String str = "Yo, banana boy!";
 
-        String strClean = convertToLettersOnly(str);
+        String strLettersOnly = convertToLettersOnly(str);
 
         System.out.println(str);
-        if (isPalindrome(strClean))
+        if (isPalindrome(strLettersOnly))
             System.out.println("Yes, it is palindrome.");
         else
             System.out.println("No, it isn't palindrome.");
@@ -20,17 +20,17 @@ public class StringAssign5 {
     public static String convertToLettersOnly(String str) {
 
         str = str.toLowerCase(); // how to apply Pattern.CASE_INSENSITIVE here?
-        String strClean = str.replaceAll("[^a-z]", "");
+        String strLettersOnly = str.replaceAll("[^a-z]", "");
 
-        return strClean;
+        return strLettersOnly;
     }
 
-    public static boolean isPalindrome(String strClean) {
+    public static boolean isPalindrome(String strLettersOnly) {
 
         int i = 0;
-        int j = strClean.length() - 1;
+        int j = strLettersOnly.length() - 1;
         while (i < j) {
-            if (strClean.charAt(i) != strClean.charAt(j))
+            if (strLettersOnly.charAt(i) != strLettersOnly.charAt(j))
                 return false;
             i++;
             j--;
